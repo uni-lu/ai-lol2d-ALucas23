@@ -28,15 +28,7 @@ public class RandomAI extends AIBase {
   }
 
   public Turn turn() {
-    Turn turn = new Turn();
-    // Try to attack the Nexus first.
-    tryAttackNexus(turn);
-    //
-    tryAttackMonster(turn);
-    tryAttackTower(turn);
-    // Add a move action in case we could not attack the Nexus.
-    tryMove(turn);
-    return turn;
+    return new Tum(this.teamID);
   }
 
   protected void tryAttackNexus(Turn turn) {
